@@ -1,5 +1,6 @@
 package com.example.app2awake;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -12,15 +13,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        EditText editText = findViewById(R.id.valor);
+        //implementacion de deeccion de ingreso en valor y filtro solo numeros en el input
         TextView textView = findViewById(R.id.resultado);
+        EditText editText = findViewById(R.id.valor);
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -59,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     public void botonSuma(View view) {
         //activa animacion
         ImageView suma = findViewById(R.id.suma);
@@ -92,13 +94,12 @@ public class MainActivity extends AppCompatActivity {
         //ejecutar operacion
         operacion("/");
     }
-
-
+//opraciones artimeticas
     public void operacion(String oper){
         //activa bandera, verifica valor ingresado para int y calcular
         EditText num = findViewById(R.id.valor);
         TextView textoBandera = findViewById(R.id.bandera);
-        textoBandera.setText("X");
+
         if (num.length() != 0) {
             int Val = Integer.parseInt(num.getText().toString());
 
@@ -134,9 +135,25 @@ public class MainActivity extends AppCompatActivity {
                     // No operacion aun.
                     break;
             }
-        // Mostrar el resultado en el TextView y limpiar Edittext
+        // Mostrar el resultado en el TextView, limpiar Edittext
         numOtro.setText(String.valueOf(opera));
         num.setText("");
+        }else{
+            //pasa bandera y veriifca si esta vacio...
+            if (textoBandera.length() != 0) {
+                mostrarAlerta("Error al ejecutar operador " + oper);
+            }
         }
+        textoBandera.setText("X");
     }
+ //mensajes de alerta
+ private void mostrarAlerta(String titulo) {
+     AlertDialog.Builder builder = new AlertDialog.Builder(this);
+     builder.setTitle(titulo)
+             .setMessage("Debe ingresar valor.")
+             .setPositiveButton("Aceptar", (dialog, which) -> dialog.dismiss());
+
+     AlertDialog alert = builder.create();
+     alert.show();
+ }
 }
