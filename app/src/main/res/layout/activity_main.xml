@@ -19,12 +19,7 @@
         android:gravity="center"
         android:background="@color/fondo">
 
-<<<<<<< HEAD
         <!-- Informacion Layout y bandera oculta -->
-=======
-        <!-- Contenido del LinearLayout superior (30% de la pantalla) -->
->>>>>>> origin/master
-
         <TextView
             android:id="@+id/uso"
             android:layout_width="match_parent"
@@ -43,10 +38,7 @@
             android:visibility="invisible"
             android:text="" />
     </LinearLayout>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     <LinearLayout
         android:id="@+id/ingreso"
         android:layout_width="match_parent"
@@ -76,11 +68,7 @@
             android:inputType="number"
             android:textColorHint="#333F49"
             android:layout_gravity="center"
-<<<<<<< HEAD
             android:textColor="#60E6E6"
-=======
-            android:textColor="#33373A"
->>>>>>> origin/master
             android:textSize="30sp"
             android:textStyle="bold"
             />
@@ -222,12 +210,7 @@
         app:layout_constraintHeight_percent="0.2"
         android:background="@color/teal_700">
 
-<<<<<<< HEAD
         <!-- Los resultados -->
-=======
-        <!-- Contenido del LinearLayout inferior (30% de la pantalla) -->
->>>>>>> origin/master
-
         <TextView
             android:id="@+id/resultado"
             android:layout_width="match_parent"
@@ -242,7 +225,5 @@
             android:padding="5sp"
             />
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

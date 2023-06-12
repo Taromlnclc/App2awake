@@ -2,21 +2,12 @@ package com.example.app2awake;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-<<<<<<< HEAD
-
-=======
-import android.content.Intent;
->>>>>>> origin/master
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-<<<<<<< HEAD
-=======
-import android.widget.Button;
->>>>>>> origin/master
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -59,14 +50,9 @@ public class MainActivity extends AppCompatActivity {
                         if(numText.length() != 0){
                             text = numText + text;
                         }
-
-<<<<<<< HEAD
                         textView.setText(text);
-=======
-                        textView.setText(String.valueOf(text));
->>>>>>> origin/master
+                        textView.setText(text);
                         editText.setText("");
-
                     }
 
                 }
@@ -127,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         int opera = 0;
-<<<<<<< HEAD
             switch (oper) {
                 case "+":
                     // Realizar la suma
@@ -149,24 +134,7 @@ public class MainActivity extends AppCompatActivity {
                     // No operacion aun.
                     break;
             }
-            // Mostrar el resultado en el TextView y limpiar Edittext
-=======
-        if (oper == "+") {
-            // Realizar la suma
-             opera = num2 + Val;
-        }else if(oper == "-"){
-            // Realizar la resta
-             opera = num2 - Val;
-        }else if(oper == "*"){
-            // Realizar la multi
-             opera = num2 * Val;
-        }else if(oper == "/"){
-            // Realizar la divi
-             opera = num2 / Val;
-        }
-
         // Mostrar el resultado en el TextView y limpiar Edittext
->>>>>>> origin/master
         numOtro.setText(String.valueOf(opera));
         num.setText("");
         }
