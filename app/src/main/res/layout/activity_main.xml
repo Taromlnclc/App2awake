@@ -12,31 +12,40 @@
         android:id="@+id/titulo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/ingreso"
         app:layout_constraintHeight_percent="0.15"
-        android:gravity="center"
-        android:background="@color/fondo">
+        android:background="@color/fondo"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
 
-        <!-- Informacion Layout y bandera oculta -->
+        <!-- Informacion Layout y boton de cierre -->
+        <!-- Info -->
         <TextView
             android:id="@+id/uso"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.85"
             android:text="@string/uso"
             android:textSize="25sp"
             android:padding="8sp"
             android:textColor="@color/colorInfo"
-            android:layout_gravity="center"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_gravity="start"/>
 
-        <TextView
-            android:id="@+id/bandera"
-            android:layout_width="match_parent"
+        <!-- Boton de cerrar -->
+        <Button
+            android:id="@+id/cerrar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:text="" />
+            android:layout_weight="0.15"
+            android:text="@string/cerrar"
+            android:textColor="@color/colorRojo"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:onClick="botonCerrar"
+            android:layout_gravity="end"/>
     </LinearLayout>
 
     <LinearLayout
@@ -56,6 +65,7 @@
             android:id="@+id/valor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="5sp"
             android:layout_marginTop="20sp"
             android:layout_marginEnd="5sp"
@@ -63,15 +73,21 @@
             android:ems="10"
             android:hint="@string/valor"
             android:importantForAutofill="no"
+            android:inputType="number"
             android:minHeight="48dp"
             android:text=""
-            android:inputType="number"
-            android:textColorHint="#333F49"
-            android:layout_gravity="center"
             android:textColor="#60E6E6"
+            android:textColorHint="#757575"
             android:textSize="30sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
+        <!-- Bandera -->
+        <TextView
+            android:id="@+id/bandera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout

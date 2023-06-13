@@ -11,4 +11,5 @@
     <string name="contresta">Boton para resta.</string>
     <string name="contmulti">Boton para multiplicar.</string>
     <string name="contdivi">Boton para dividir.</string>
+    <string name="cerrar">X</string>
 </resources>

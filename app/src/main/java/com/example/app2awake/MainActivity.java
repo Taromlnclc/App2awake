@@ -156,4 +156,9 @@ public class MainActivity extends AppCompatActivity {
      AlertDialog alert = builder.create();
      alert.show();
  }
+ //cierra app
+ public void botonCerrar(View view) {
+        finishAffinity(); // Cierra la aplicación completamente al estar depurando no hace cierra total, probar  System.exit(0); no recomendado
+ }
+
 }
